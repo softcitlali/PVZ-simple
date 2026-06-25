@@ -1,4 +1,3 @@
-/* 全局样式 */
 * {
     margin: 0;
     padding: 0;
@@ -6,691 +5,154 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* 导航栏 */
-nav {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.nav-links {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
     display: flex;
-    list-style: none;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #0066cc;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-/* 响应式导航 */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-    }
-    
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
-
-/* 英雄区域 */
-.hero {
-    background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
-    color: #fff;
-    padding: 120px 0 80px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #fff;
-    color: #0066cc;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #f8f9fa;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* 通用部分样式 */
-.section {
-    padding: 80px 0;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.section p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    color: #666;
-}
-
-/* 特性卡片 */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.feature-card {
-    background-color: #f8f9fa;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.feature-card h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* 工具网格 */
-.tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.tool-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.tool-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.tool-icon {
-    font-size: 4rem;
-    text-align: center;
-    padding: 30px 0;
-    background-color: #f8f9fa;
-    margin-bottom: 20px;
-}
-
-.tool-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.tool-card h3 {
+.game-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
     padding: 20px;
-    padding-bottom: 10px;
-    color: #333;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.tool-card p {
-    padding: 0 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    margin: 0;
-    color: #666;
-}
-
-.tool-links {
+.chooser-container {
+    background-image: url('ChooserBackground/ChooserBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin-bottom: 15px;
     display: flex;
-    flex-direction: column;
-}
-
-.tool-website {
-    display: block;
+    align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.tool-website:hover {
-    background-color: #e9ecef;
-}
-
-.tool-link {
-    display: block;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-    text-decoration: none;
-    color: #0066cc;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.tool-link:hover {
-    background-color: #e9ecef;
-}
-
-/* 教程列表 */
-.tutorial-list {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
-.tutorial-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.tutorial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.tutorial-content {
-    padding: 30px;
-}
-
-.tutorial-tag {
-    display: inline-block;
-    background-color: #e3f2fd;
-    color: #1976d2;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.tutorial-card h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.tutorial-card p {
-    text-align: left;
-    margin: 0 0 20px;
-    color: #666;
-}
-
-.tutorial-link {
-    display: inline-block;
-    color: #0066cc;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.tutorial-link:hover {
-    color: #004c99;
-}
-
-/* 关于我们 */
-.bg-light {
-    background-color: #f8f9fa;
-}
-
-.contact-info {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.contact-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-/* 页脚 */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 60px 0 30px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.footer-links {
-    display: flex;
-    gap: 30px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #0099ff;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid #555;
-    color: #999;
-}
-
-/* 教程详情样式 */
-.tutorial-detail {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.tutorial-detail h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.tutorial-detail .tutorial-tag {
-    display: inline-block;
-    background-color: #e3f2fd;
-    color: #1976d2;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.tutorial-content-full {
-    line-height: 1.8;
-}
-
-.tutorial-content-full h4 {
-    font-size: 1.3rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.tutorial-content-full p {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.tutorial-content-full strong {
-    color: #333;
-}
-
-.tutorial-content-full ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.tutorial-content-full li {
-    margin-bottom: 8px;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .section h2 {
-        font-size: 2rem;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        justify-content: center;
-    }
-    
-    .tutorial-detail {
-        padding: 20px;
-    }
-    
-    .tutorial-detail h3 {
-        font-size: 1.5rem;
-    }
-    
-    .tutorial-content-full h4 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .section {
-        padding: 60px 0;
-    }
-    
-    .feature-card,
-    .tool-card,
-    .tutorial-card {
-        padding: 20px;
-    }
-}
-
-/* AI助手悬浮窗样式 */
-.ai-assistant-floating {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
-}
-
-.ai-assistant-toggle {
+.sun-count {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 20px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-    transition: all 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700;
+    min-width: 100px;
+    padding-left: 20px;
 }
 
-.ai-assistant-toggle:hover {
-    background-color: #0052a3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+.sun-icon {
+    font-size: 32px;
 }
 
-.ai-icon {
-    font-size: 20px;
-}
-
-.ai-assistant-window {
-    position: absolute;
-    bottom: 70px;
-    right: 0;
-    width: 400px;
-    max-width: 90vw;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    transform: translateY(20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.ai-assistant-window.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
-
-.ai-assistant-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.ai-assistant-header h3 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-}
-
-.ai-assistant-close {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #666;
-    transition: color 0.3s ease;
-}
-
-.ai-assistant-close:hover {
-    color: #333;
-}
-
-.chat-messages {
-    height: 350px;
-    overflow-y: auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-.message {
-    margin-bottom: 20px;
-    max-width: 80%;
-}
-
-.user-message {
-    margin-left: auto;
-}
-
-.bot-message {
-    margin-right: auto;
-}
-
-.message-content {
-    padding: 15px 20px;
-    border-radius: 18px;
-    line-height: 1.6;
-}
-
-.user-message .message-content {
-    background-color: #e3f2fd;
-    color: #1976d2;
-    border-bottom-right-radius: 4px;
-}
-
-.bot-message .message-content {
-    background-color: #f1f1f1;
-    color: #333;
-    border-bottom-left-radius: 4px;
-}
-
-.chat-input {
-    display: flex;
-    padding: 20px;
-    border-top: 1px solid #e9ecef;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 20px 0 0 20px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.chat-input input:focus {
-    border-color: #0066cc;
-}
-
-.chat-input button {
-    padding: 12px 20px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 0 20px 20px 0;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.chat-input button:hover {
-    background-color: #0052a3;
-}
-
-.quick-questions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0 20px 20px;
-}
-
-.quick-question {
+.selected-plant {
+    font-size: 18px;
+    color: #fff;
     padding: 8px 16px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    font-size: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.plant-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.plant-card {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    min-width: 60px;
+    height: 80px;
+    user-select: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.plant-card[data-plant="sunflower"] {
+    background-image: url('cards/card_sunflower.png');
+}
+
+.plant-card[data-plant="peashooter"] {
+    background-image: url('cards/card_peashooter.png');
+}
+
+.plant-card:active {
+    cursor: grabbing;
+}
+
+.plant-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(74, 143, 64, 0.5);
+}
+
+.plant-card.selected {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.plant-card.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.plant-card.disabled[data-plant="sunflower"] {
+    background-image: url('cards/card_sunflower2.png');
+}
+
+.plant-card.disabled[data-plant="peashooter"] {
+    background-image: url('cards/card_peashooter2.png');
+}
+
+.plant-card.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.plant-card.disabled:active {
+    cursor: not-allowed;
+}
+
+#game-canvas {
+    border: 3px solid #4a8f40;
+    border-radius: 10px;
+    background: #2d5a27;
+    display: block;
+    transition: box-shadow 0.3s ease;
+}
+
+#game-canvas.drag-over {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    border-color: #ffd700;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.controls button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(145deg, #c0392b, #a93226);
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.quick-question:hover {
-    background-color: #e9ecef;
-    border-color: #0066cc;
-    color: #0066cc;
-}
-
-/* 滚动条样式 */
-.chat-messages::-webkit-scrollbar {
-    width: 6px;
-}
-
-.chat-messages::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-}
-
-.chat-messages::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-}
-
-.chat-messages::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .ai-assistant-floating {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .ai-assistant-window {
-        width: 320px;
-    }
-    
-    .chat-messages {
-        height: 300px;
-    }
-    
-    .message {
-        max-width: 90%;
-    }
-    
-    .quick-questions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .quick-question {
-        text-align: center;
-    }
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(192, 57, 43, 0.5);
 }

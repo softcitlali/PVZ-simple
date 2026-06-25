@@ -1,16 +1,95 @@
-## Hi there 👋
+# 🌻 植物大战僵尸 - 简化版
 
-<!--
-**softcitlali/softcitlali** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+一个基于Canvas的植物大战僵尸简化版游戏，实现了向日葵和豌豆射手的基本逻辑。
 
-Here are some ideas to get you started:
+## 🎮 游戏特性
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- **拖拽种植**：从植物卡片拖拽植物到草坪即可种植
+- **向日葵系统**：每7秒自动产出25阳光
+- **豌豆射手攻击**：自动检测僵尸并发射豌豆
+- **僵尸入侵**：抵御僵尸波次的进攻
+- **精美素材**：使用真实的植物大战僵尸素材图片
+
+## 🌱 植物介绍
+
+### 向日葵 🌻
+- **价格**：50阳光
+- **功能**：每7秒产出25阳光
+- **策略**：优先种植，建立经济基础
+
+### 豌豆射手 🌱
+- **价格**：100阳光
+- **功能**：检测到僵尸时自动发射豌豆（每1.5秒）
+- **伤害**：每颗豌豆造成20点伤害
+- **策略**：种植在僵尸进攻路线进行防御
+
+## 🧟 僵尸特性
+
+- **生命值**：100点
+- **移动速度**：缓慢前进
+- **碰撞检测**：遇到植物会停下
+- **胜利条件**：到达左侧边界即游戏失败
+
+## 🎯 操作说明
+
+1. **拖拽种植**：
+   - 从上方植物卡片拖拽植物
+   - 将其拖到草坪格子上松开鼠标即可种植
+
+2. **阳光收集**：
+   - 点击掉落的阳光即可收集
+   - 阳光不足时卡片会显示灰色状态
+
+3. **开始波次**：
+   - 点击"开始僵尸波次"按钮召唤僵尸
+   - 每次召唤3只僵尸，间隔1.5秒
+
+## 🚀 技术实现
+
+- **Canvas绘制**：所有游戏元素通过Canvas API绘制
+- **面向对象设计**：使用类（Plant、Sunflower、Peashooter、Zombie）管理游戏对象
+- **图片备用方案**：所有图片都有Canvas绘制的备用方案，确保游戏稳定运行
+- **拖拽API**：使用HTML5 Drag & Drop API实现拖拽种植功能
+
+## 🌐 在线访问
+
+**GitHub Pages**: https://softcitlali.github.io/PVZ-simple/
+
+## 📁 文件结构
+
+```
+PVZ-simple/
+├── index.html          # 游戏主页
+├── style.css           # 游戏样式
+├── game.js             # 游戏核心逻辑
+├── ChooserBackground/  # 选择栏背景
+├── background/         # 游戏背景
+├── cards/              # 植物卡片素材
+├── plants/             # 植物种植后素材
+├── sun/                # 阳光素材
+├── zombies/            # 僵尸素材
+└── README.md           # 项目说明
+```
+
+## 🎨 素材来源
+
+所有游戏素材均来自植物大战僵尸原版游戏，仅供学习和娱乐使用。
+
+## 📝 开发日志
+
+- ✅ 实现向日葵生产阳光逻辑
+- ✅ 实现豌豆射手自动攻击逻辑
+- ✅ 实现僵尸移动和碰撞检测
+- ✅ 实现拖拽种植功能
+- ✅ 集成真实游戏素材
+- ✅ 使用ChooserBackground作为选择栏背景
+
+## 🎮 开始游戏
+
+立即访问：https://softcitlali.github.io/PVZ-simple/
+
+---
+
+**制作**: softcitlali & trae
+**版本**: 1.0
+**更新时间**: 2026-06-25
